@@ -1,0 +1,48 @@
+html{
+    scroll-behavior: smooth;
+  }
+  .scrollUp{
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top:30px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .scrollUp::before,
+  .scrollUp::after{
+    content:'';
+    position:absolute;
+    top:90%;
+    left:50%;
+    border: 2px solid black;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%,-100%) rotate(225deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrollUp 1s ease-in-out infinite;
+  }
+  .scrollUp::after{
+    bottom:30%;
+    animation-delay: .3s;
+  }
+  
+  @keyframes scrollUp {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
+    60%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      top:20%;
+    }
+  }
