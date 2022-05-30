@@ -1,50 +1,51 @@
 .sqaureTL{
-    height: 30vh;
-    width: 20vw;
+    height:400px;
+    width: 400px;
     background-color: black;
     color: aliceblue;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     right: 20vw;
     bottom:1vh;
   }
   .sqaureBL{
-    height: 30vh;
-    width: 20vw;
+    height:400px;
+    width: 400px;
     background-color: black;
     color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: absolute;
     right: 20vw;
     top:1vh;
   }
   .sqaureTR{
-    height: 30vh;
-    width: 20vw;
+    height:400px;
+    width: 400px;
     background-color: black;
     color: aliceblue;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     border-radius: 25px;
     position: absolute;
     left: 20vw;
     bottom:1vh;
   }
   .sqaureBR{
-    height: 30vh;
-    width: 20vw;
+    height:400px;
+    width: 400px;
     background-color: black;
     color: aliceblue;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     border-radius: 25px;
     position: absolute;
     left: 20vw;
