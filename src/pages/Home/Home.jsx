@@ -1,5 +1,4 @@
 import React from "react"
-import Page from "../../components/Page/Page"
 import Landing from "../../components/Landing/Landing"
 import About from "../../components/About/About"
 import Projects from "../../components/Projects/Projects"

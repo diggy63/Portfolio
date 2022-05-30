@@ -1,0 +1,26 @@
+.sqaureTL{
+    height: 30vh;
+    width: 20vw;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    position: absolute;
+    right: 20vw;
+    bottom:1vh;
+  }
+  .sqaureBL{
+    height: 30vh;
+    width: 20vw;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    position: absolute;
+    right: 20vw;
+    top:1vh;
+  }
