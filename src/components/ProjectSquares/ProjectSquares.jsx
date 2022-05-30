@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./ProjectSquares.css";
-import { Grid, Card, Image, Icon, Button } from "semantic-ui-react";
+import { Grid, Card, Image, Icon, Button, Segment } from "semantic-ui-react";
 
 export default function Square() {
   return (
     <>
-      <Grid>
+      <Grid relaxed>
+          
         <Grid.Row textAlign="center">
           <Grid.Column width={8} textAlign="center">
             <AnimationOnScroll
@@ -137,6 +138,7 @@ export default function Square() {
             </AnimationOnScroll>
           </Grid.Column>
         </Grid.Row>
+        
       </Grid>
     </>
   );
