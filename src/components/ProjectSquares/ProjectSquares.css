@@ -1,53 +1,15 @@
-.sqaureTL{
-    height:400px;
-    width: 400px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    border-radius: 25px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    right: 20vw;
-    bottom:1vh;
-  }
-  .sqaureBL{
-    height:400px;
-    width: 400px;
-    background-color: black;
-    color: aliceblue;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    right: 20vw;
-    top:1vh;
-  }
-  .sqaureTR{
-    height:400px;
-    width: 400px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 25px;
-    position: absolute;
-    left: 20vw;
-    bottom:1vh;
-  }
-  .sqaureBR{
-    height:400px;
-    width: 400px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 25px;
-    position: absolute;
-    left: 20vw;
-    top:1vh;
-  }
+.heads{
+  margin-top: 30px;
+  padding: 10px;
+  height: 60px;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.margintop{
+  margin-top: 60px;
+}

@@ -7,7 +7,7 @@ html{
     border: 2px solid black;
     position: absolute;
     left: 50%;
-    top:30px;
+    top:20px;
     border-radius: 30px;
     cursor: pointer;
   }

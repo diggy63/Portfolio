@@ -2,13 +2,26 @@ import React, { useEffect } from "react";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./ProjectSquares.css";
-import { Grid, Card, Image, Icon, Button, Segment } from "semantic-ui-react";
+import { Grid, Card, Image, Icon, Button, Segment, Header } from "semantic-ui-react";
 
 export default function Square() {
   return (
     <>
-      <Grid relaxed>
-          
+      <Grid centered className="margintop">
+        <Grid.Row>
+        <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              animateOut="animate__fadeIn"
+            >
+          <div className="heads">
+          <Header textAlign="center">
+            <Header.Content>
+              Projects
+              </Header.Content>
+          </Header>
+          </div>
+          </AnimationOnScroll>
+          </Grid.Row>
         <Grid.Row textAlign="center">
           <Grid.Column width={8} textAlign="center">
             <AnimationOnScroll
