@@ -7,3 +7,16 @@
     align-items: center;
     position: relative;
   } */
+
+  .fontSize50{
+    font-size: 50px;
+  }
+
+  .flexy{
+    display: flex;
+    flex-direction: column;
+  }
+  .Title{
+    font-size: 60px;
+    margin-bottom: 50px;
+  }

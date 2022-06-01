@@ -9,7 +9,7 @@ export default function Square() {
     <>
       <Grid centered className="margintop">
         <Grid.Row>
-        <AnimationOnScroll
+        {/* <AnimationOnScroll
               animateIn="animate__fadeIn"
               animateOut="animate__fadeIn"
             >
@@ -20,7 +20,7 @@ export default function Square() {
               </Header.Content>
           </Header>
           </div>
-          </AnimationOnScroll>
+          </AnimationOnScroll> */}
           </Grid.Row>
         <Grid.Row textAlign="center">
           <Grid.Column width={8} textAlign="center">
@@ -124,7 +124,7 @@ export default function Square() {
               delay={200}
               animateOut="animate__fadeOutRightBig"
             >
-              <Card centered>
+              <Card centered className="white">
                 <Image
                   src="https://i.imgur.com/oRkjwld.png"
                   wrapped
