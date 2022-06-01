@@ -51,7 +51,7 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={8}>
+          <Grid.Column width={8} textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInRightBig"
               animateOut="animate__fadeOutRightBig"
@@ -85,7 +85,7 @@ export default function Square() {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row textAlign="center">
-          <Grid.Column width={8}>
+          <Grid.Column width={8} textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInLeftBig"
               delay={200}
@@ -118,7 +118,7 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={8}>
+          <Grid.Column width={8} textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInRightBig"
               delay={200}

@@ -1,52 +1,5 @@
-.sqaureTL{
-    height: 30vh;
-    width: 20vw;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    position: absolute;
-    right: 20vw;
-    bottom:1vh;
-  }
-  .sqaureBL{
-    height: 30vh;
-    width: 20vw;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    position: absolute;
-    right: 20vw;
-    top:1vh;
-  }
-  .sqaureTR{
-    height: 30vh;
-    width: 20vw;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    position: absolute;
-    left: 20vw;
-    bottom:1vh;
-  }
-  .sqaureBR{
-    height: 30vh;
-    width: 20vw;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    position: absolute;
-    left: 20vw;
-    top:1vh;
-  }
+.white{
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 20px;
+}
