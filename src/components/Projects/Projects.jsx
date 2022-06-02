@@ -4,9 +4,9 @@ import Scrollup from "../Scrollup/ScrollUp";
 import "./Projects.css";
 import ProjectSquares from "../../components/ProjectSquares/ProjectSquares"
 
-export default function Page({ pageID, pageDown, pageUp }) {
+export default function Page({ pageID, pageDown, pageUp, secClass }) {
   return (
-    <div id={pageID} className="section1">
+    <div id={pageID} className={secClass}>
         <ProjectSquares />
         <Scrollup pageUp={pageUp}/>
       <Scrolldown pageDown={pageDown} pageID={pageID}/>

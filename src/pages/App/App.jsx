@@ -8,7 +8,7 @@ import userService from "../../utils/userService";
 import Home from "../Home/Home";
 
 function App() {
-  const [user, setUser] = useState(userService.getUser()); // getUser decodes our JWT token, into a javascript object
+  const [user, setUser] = useState(userService.getUser());// getUser decodes our JWT token, into a javascript object
   // this object corresponds to the jwt payload which is defined in the server signup or login function that looks like
   // this  const token = createJWT(user); // where user was the document we created from mongo
 
@@ -21,25 +21,10 @@ function App() {
     setUser(null);
   }
 
-  if (user) {
-    return (
-      <Routes>
-        <Route path="/" element={<h1>This is Home Page!</h1>} />
-        <Route
-          path="/login"
-          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-        />
-      </Routes>
-    );
-  }
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home/>} />
     </Routes>
   );
 }

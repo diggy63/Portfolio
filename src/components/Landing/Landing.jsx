@@ -7,25 +7,27 @@ import { Grid, Radio } from "semantic-ui-react";
 import { useEffect } from "react";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
-export default function Page({ pageID, pageDown, pageUp }) {
+export default function Page({ pageID, pageDown, pageUp, secClass, setDarkLight }) {
   const [isDark, setIsDark] = useState(true);
 
     
-  function handleChange(e){
-    setIsDark(!isDark)
-    console.log(isDark)      
-  }
+  // function handleChange(e){
+  //   setDarkLight();
+  //   // setIsDark(!isDark)
+  //   // console.log(isDark)      
+  // }
 
   const dOrL = isDark ? "section1 flexy" : "section2 flexy"
 
   return (
-    <div id={pageID} className={dOrL}>
-      <ToggleSwitch />
+    <div id={pageID} className={secClass}>
+      <div className="flexy">
       <div className="Title">Daniel Kanczugowski</div>
         <LandingContent />
-        <Radio toggle onChange={handleChange}/>
+        <ToggleSwitch handleChange={setDarkLight}/>
         <Scrollup pageUp={pageUp}/>
       <Scrolldown pageDown={pageDown} pageID={pageID}/>
+      </div>
     </div>
   );
 }

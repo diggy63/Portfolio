@@ -1,6 +1,7 @@
 {
   "name": "jwt-boilerplate",
   "version": "0.1.0",
+  "homepage": "http://danielkanczugowski.com/",
   "private": true,
   "dependencies": {
     "@semantic-ui-react/css-patch": "^1.0.0",
