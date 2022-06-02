@@ -46,3 +46,54 @@ html{
       top:20%;
     }
   }
+
+  
+
+  html{
+    scroll-behavior: smooth;
+  }
+  .scrollUpDark{
+    height: 50px;
+    width: 30px;
+    border: 2px solid #e5e5e5;
+    position: absolute;
+    left: 50%;
+    top:20px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .scrollUpDark::before,
+  .scrollUpDark::after{
+    content:'';
+    position:absolute;
+    top:90%;
+    left:50%;
+    border: 2px solid #e5e5e5;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%,-100%) rotate(225deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrollUp 1s ease-in-out infinite;
+  }
+  .scrollUpDark::after{
+    bottom:30%;
+    animation-delay: .3s;
+  }
+  
+  @keyframes scrollUp {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
+    60%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      top:20%;
+    }
+  }

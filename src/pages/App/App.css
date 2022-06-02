@@ -85,3 +85,13 @@
 		transform: scale(1, .025);
 	}
 }
+
+.contactImage{
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.flexCenter{
+  display: flex;
+}

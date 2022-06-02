@@ -10,6 +10,11 @@
 
   .fontSize50{
     font-size: 50px;
+    
+  }
+  .fontSize50Dark{
+    font-size: 50px;
+    color: #e5e5e5;
   }
 
   .flexy{
@@ -21,6 +26,12 @@
   .Title{
     font-size: 60px;
     margin-bottom: 50px;
+  }
+
+  .TitleDark{
+    font-size: 60px;
+    margin-bottom: 50px;
+    color: #e5e5e5;
   }
 
   @media (max-width: 500px) {

@@ -11,70 +11,98 @@ import {
   Segment,
   Header,
   Container,
+  Modal,
 } from "semantic-ui-react";
+import { saveAs } from 'file-saver'
 
 export default function Square() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  const [open, setOpen] = React.useState(false);
 
-{/* Performs similarly to componentDidMount in classes */}
-useEffect(() => {
-    window.addEventListener("resize", () => {
+  function dlRes(e){
+    saveAs('/Images/Resume.jpg', 'resumeDanielK.jpg')
+
+  }
+  useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => {
         const ismobile = window.innerWidth < 600;
         if (ismobile !== isMobile) setIsMobile(ismobile);
-    }, false);
-}, [isMobile]);
-  
-  const iconClass = isMobile ? 'mini': 'tiny';
+      },
+      false
+    );
+  }, [isMobile]);
+
+  const iconClass = isMobile ? "mini" : "tiny";
   return (
     // <Segment style={{maxWidth:1200}} padded="very">
     <Grid style={{ maxWidth: 1200 }} centered stretched textAlign="justified">
       <Grid.Row centered textAlign="center">
-        
         <Grid.Column width={7} textAlign="center">
-        <AnimationOnScroll
-        animateIn="animate__rotateInDownLeft"
-        animateOut="animate__fadeOutLeftBig"
-        >
-          <div className="white">
-          <div className="title">About Me</div> 
-          <p>
-            A Junior Developer with a background in Mern Stack, management, and
-            collegiate sports, I approach each project understanding that big
-            achievements take small, precise steps. With my strong problem
-            solving skills and a willingness to learn quickly, I bring passion
-            for succeeding and offering solutions to colleagues and clients.
-          </p>
-          </div>
-          </AnimationOnScroll>
-
-        </Grid.Column>
-        
-        <Grid.Column width={7} textAlign="center">
-        <AnimationOnScroll
-        animateIn="animate__rotateInDownRight"
-        animateOut="animate__fadeOutLeftBig"
-        >
-           <div className="white">
-          <div className="title">Education</div>
-            <p>General Assembly: Software Engineer Immersive</p>
-            <p>University of Washington: BA Poli Sci</p>
+          <AnimationOnScroll
+            animateIn="animate__rotateInDownLeft"
+            animateOut="animate__fadeOutLeftBig"
+          >
+            <div className="white">
+              <div className="title">About Me</div>
+              <p>
+                A Junior Developer with a background in MERN full-stack web
+                development, management, and collegiate sports. I approach each
+                project understanding that big achievements take small, precise
+                steps. With strong problem-solving skills and a willingness to
+                learn quickly, I bring passion for succeeding and offering
+                solutions to colleagues and clients.
+              </p>
             </div>
           </AnimationOnScroll>
         </Grid.Column>
-        
-      </Grid.Row>
-      <Grid.Row stretched className="marginTop" verticalAlign="bottom">
-      <AnimationOnScroll
-            animateIn="animate__fadeInUpBig"
+
+        <Grid.Column width={7} textAlign="center">
+          <AnimationOnScroll
+            animateIn="animate__rotateInDownRight"
             animateOut="animate__fadeOutLeftBig"
           >
-        <Grid.Column
-          className="white marginTop"
-          textAlign="center"
-          verticalAlign="middle"
-          width={14}
+            <div className="white">
+              <div className="title">Education</div>
+              <p>General Assembly: Software Engineer Immersive</p>
+              <p>University of Washington: BA Poli Sci</p>
+              <Modal
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                trigger={<Button>Resume</Button>}
+              >
+                <Modal.Content image>
+                  <Image
+                  centered
+                    size="big"
+                    src="/Images/Resume.jpg"
+                    wrapped
+                  />
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button onClick={dlRes}>Download</Button>
+                  <Button color="black" onClick={() => setOpen(false)}>
+                    Done
+                  </Button>
+                </Modal.Actions>
+              </Modal>
+            </div>
+          </AnimationOnScroll>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row stretched className="marginTop" verticalAlign="bottom">
+        <AnimationOnScroll
+          animateIn="animate__fadeInUpBig"
+          animateOut="animate__fadeOutLeftBig"
         >
-          
+          <Grid.Column
+            className="white marginTop"
+            textAlign="center"
+            verticalAlign="middle"
+            width={14}
+          >
             <div className="title">Skills</div>
             <Image.Group size={iconClass}>
               <Image src="/Images/htmlB2.png" />
@@ -88,8 +116,7 @@ useEffect(() => {
               <Image src="/Images/django.png" />
               <Image src="/Images/postgresql.png" />
             </Image.Group>
-          
-        </Grid.Column>
+          </Grid.Column>
         </AnimationOnScroll>
       </Grid.Row>
       {/* <AnimationOnScroll animateIn="animate__fadeInLeftBig" animateOut="animate__fadeOutLeftBig">

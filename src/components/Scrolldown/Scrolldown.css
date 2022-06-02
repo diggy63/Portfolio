@@ -1,48 +1,97 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+.scroll{
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50%;
+  bottom:30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.scroll::before,
+.scroll::after{
+  content:'';
+  position:absolute;
+  top:10%;
+  left:50%;
+  border: 2px solid black;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%,-100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll 1s ease-in-out infinite;
+}
+.scroll::after{
+  top:30%;
+  animation-delay: .3s;
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
   }
-  .scroll{
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom:30px;
-    border-radius: 30px;
-    cursor: pointer;
+  30%{
+    opacity: 1;
   }
-  
-  .scroll::before,
-  .scroll::after{
-    content:'';
-    position:absolute;
-    top:10%;
-    left:50%;
-    border: 2px solid black;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%,-100%) rotate(45deg);
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll 1s ease-in-out infinite;
+  60%{
+    opacity: 1;
   }
-  .scroll::after{
-    top:30%;
-    animation-delay: .3s;
+  100%{
+    opacity: 0;
+    top:90%;
   }
-  
-  @keyframes scroll {
-    0%{
-      opacity: 0;
-    }
-    30%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-      top:90%;
-    }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+.scrollDark{
+  height: 50px;
+  width: 30px;
+  border: 2px solid #e5e5e5;
+  position: absolute;
+  left: 50%;
+  bottom:30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.scrollDark::before,
+.scrollDark::after{
+  content:'';
+  position:absolute;
+  top:10%;
+  left:50%;
+  border: 2px solid #e5e5e5;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%,-100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll 1s ease-in-out infinite;
+}
+.scrollDark::after{
+  top:30%;
+  animation-delay: .3s;
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
   }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top:90%;
+  }
+}
