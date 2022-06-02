@@ -11,6 +11,7 @@ import {
 import Typewriter from "typewriter-effect";
 
 export default function LandingContent() {
+    
   return (
       <div className="fontSize50">
     <Typewriter
