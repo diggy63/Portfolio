@@ -9,8 +9,9 @@ export default function Square() {
     <>
       <Grid centered className="margintop">
         <Grid.Row>
-        {/* <AnimationOnScroll
+        <AnimationOnScroll
               animateIn="animate__fadeIn"
+              delay={1000}
               animateOut="animate__fadeIn"
             >
           <div className="heads">
@@ -20,12 +21,14 @@ export default function Square() {
               </Header.Content>
           </Header>
           </div>
-          </AnimationOnScroll> */}
+          </AnimationOnScroll>
           </Grid.Row>
         <Grid.Row textAlign="center">
-          <Grid.Column width={8} textAlign="center">
+          
+          <Grid.Column width={4} textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInLeftBig"
+              delay={200}
               animateOut="animate__fadeOutLeftBig"
             >
               <Card centered>
@@ -51,10 +54,11 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={8} textAlign="center">
+          
+          <Grid.Column width={4} textAlign="center">
             <AnimationOnScroll
-              animateIn="animate__fadeInRightBig"
-              animateOut="animate__fadeOutRightBig"
+              animateIn="animate__fadeInLeftBig"
+              animateOut="animate__fadeOutLeftBig"
             >
               <Card centered>
                 <Image
@@ -83,13 +87,10 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-        </Grid.Row>
-        <Grid.Row textAlign="center">
-          <Grid.Column width={8} textAlign="center">
+          <Grid.Column width={4} textAlign="center">
             <AnimationOnScroll
-              animateIn="animate__fadeInLeftBig"
-              delay={200}
-              animateOut="animate__fadeOutLeftBig"
+              animateIn="animate__fadeInRightBig"
+              animateOut="animate__fadeOutRightBig"
             >
               <Card centered>
                 <Image
@@ -118,7 +119,7 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={8} textAlign="center">
+          <Grid.Column width={4} textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInRightBig"
               delay={200}

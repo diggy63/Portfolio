@@ -13,3 +13,7 @@
 .margintop{
   margin-top: 60px;
 }
+
+.nomargin{
+  margin: 0;
+}

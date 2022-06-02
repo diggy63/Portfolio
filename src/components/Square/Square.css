@@ -15,9 +15,13 @@
   width: 40vw;
   border-style: solid;
   border-radius: 25px;
+ 
 }
 
 .textAbout{
+  display: flex;
+  justify-content: center;
+  text-align: center;
   color: #14213d;
   font-size: 20px;
 }
@@ -32,5 +36,39 @@ li{
 }
 
 .marginTop{
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.title{
+  display: block;
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #457b9d;
+}
+
+p{
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+
+  p{
+    font-size: 12px;
+  }
+
+  .title{
+    display: block;
+  font-size: 24px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  }
 }

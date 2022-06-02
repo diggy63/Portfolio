@@ -20,3 +20,16 @@
     font-size: 60px;
     margin-bottom: 50px;
   }
+
+  @media (max-width: 500px) {
+    .Title{
+      font-size: 40px;
+    }
+
+    .fontSize50{
+      font-size: 30px;
+    }
+
+
+  }
+
