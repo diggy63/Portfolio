@@ -1,10 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./ProjectSquares.css";
 import { Grid, Card, Image, Icon, Button, Segment, Header } from "semantic-ui-react";
 
 export default function Square() {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+  useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => {
+        const ismobile = window.innerWidth < 600;
+        if (ismobile !== isMobile) setIsMobile(ismobile);
+      },
+      false
+    );
+  }, [isMobile]);
+
+  const rowCols = isMobile ? 2 : 4;
+
   return (
     <>
       <Grid centered className="margintop">
@@ -23,9 +39,9 @@ export default function Square() {
           </div>
           </AnimationOnScroll>
           </Grid.Row>
-        <Grid.Row textAlign="center">
+        <Grid.Row textAlign="center" columns={rowCols}>
           
-          <Grid.Column width={4} textAlign="center">
+          <Grid.Column textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInLeftBig"
               delay={200}
@@ -55,7 +71,7 @@ export default function Square() {
             </AnimationOnScroll>
           </Grid.Column>
           
-          <Grid.Column width={4} textAlign="center">
+          <Grid.Column textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInLeftBig"
               animateOut="animate__fadeOutLeftBig"
@@ -87,7 +103,7 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={4} textAlign="center">
+          <Grid.Column textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInRightBig"
               animateOut="animate__fadeOutRightBig"
@@ -119,7 +135,7 @@ export default function Square() {
               </Card>
             </AnimationOnScroll>
           </Grid.Column>
-          <Grid.Column width={4} textAlign="center">
+          <Grid.Column  textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInRightBig"
               delay={200}

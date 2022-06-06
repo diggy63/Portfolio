@@ -97,3 +97,10 @@ html{
       top:20%;
     }
   }
+
+  @media (max-width: 500px) {
+    .scrollUpDark, .scrollUp{ 
+    display: none;
+
+  }
+}

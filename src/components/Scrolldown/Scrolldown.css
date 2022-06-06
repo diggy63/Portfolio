@@ -95,3 +95,10 @@ html{
     top:90%;
   }
 }
+
+@media (max-width: 500px) {
+  .scrollDark, .scroll{ 
+  display: none;
+
+}
+}

@@ -35,11 +35,11 @@
   }
 
   @media (max-width: 500px) {
-    .Title{
+    .Title, .TitleDark{
       font-size: 40px;
     }
 
-    .fontSize50{
+    .fontSize50, .fontSize50Dark{
       font-size: 30px;
     }
 
