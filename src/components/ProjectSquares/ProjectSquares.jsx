@@ -21,6 +21,130 @@ export default function Square() {
 
   const rowCols = isMobile ? 2 : 4;
 
+  if(isMobile){
+    return(
+      <Grid centered className="margintop">
+        <Grid.Row>
+          <div className="heads">
+          <Header textAlign="center">
+            <Header.Content>
+              Projects
+              </Header.Content>
+          </Header>
+          </div>
+          </Grid.Row>
+        <Grid.Row textAlign="center" columns={rowCols}>
+          
+          <Grid.Column textAlign="center">
+              <Card centered>
+                <Image
+                  src="https://i.imgur.com/zNjJfPH.png"
+                  wrapped
+                  ui={false}
+                />
+                <Card.Content>
+                  <Card.Header>Frogger</Card.Header>
+                  <Card.Description>
+                    Simple game made with HTML, CSS, and Vanilla JS
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <a href="https://diggy63.github.io/FroggerJSStyle/">
+                    <Button>View</Button>
+                  </a>
+                  <a href="https://github.com/diggy63/FroggerJSStyle">
+                    <Button>GitHub</Button>
+                  </a>
+                </Card.Content>
+              </Card>
+          </Grid.Column>
+          
+          <Grid.Column textAlign="center">
+              <Card centered>
+                <Image
+                  src="https://i.imgur.com/Tozmyve.jpg"
+                  wrapped
+                  ui={false}
+                />
+                <Card.Content>
+                  <Card.Header>Cocktail Instgram</Card.Header>
+                  <Card.Meta>
+                    <span className="date">Node.js, Mongoose, Mongodb</span>
+                  </Card.Meta>
+                  <Card.Description>
+                    App where you can share you favorite cocktails and comment
+                    and like.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a href="https://cocktail-lounge-dk.herokuapp.com/">
+                    <Button>View</Button>
+                  </a>
+                  <a href="https://github.com/diggy63/Project-2-SEIR">
+                    <Button>GitHub</Button>
+                  </a>
+                </Card.Content>
+              </Card>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+              <Card centered>
+                <Image
+                  src="https://i.imgur.com/0QdPndG.jpg"
+                  wrapped
+                  ui={false}
+                />
+                <Card.Content>
+                  <Card.Header>EventBuds</Card.Header>
+                  <Card.Meta>
+                    <span className="date">Django, Python, postgreSQL</span>
+                  </Card.Meta>
+                  <Card.Description>
+                    App to track what who is going to what event and find
+                    friends.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a href="https://eventbuds.herokuapp.com/">
+                    <Button>View</Button>
+                  </a>
+                  <a href="https://github.com/diggy63/eventbuds">
+                    <Button>GitHub</Button>
+                  </a>
+                </Card.Content>
+              </Card>
+          </Grid.Column>
+          <Grid.Column  textAlign="center">
+              <Card centered className="white">
+                <Image
+                  src="https://i.imgur.com/oRkjwld.png"
+                  wrapped
+                  ui={false}
+                />
+                <Card.Content>
+                  <Card.Header>Workout Tracker</Card.Header>
+                  <Card.Meta>
+                    <span className="date">MERN Full-Stack</span>
+                  </Card.Meta>
+                  <Card.Description>
+                    Workout tracker with API excercise information.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a href="https://workouttrackerdk.herokuapp.com/">
+                    <Button>View</Button>
+                  </a>
+                  <a href="https://github.com/diggy63/eventbuds">
+                    <Button>GitHub</Button>
+                  </a>
+                </Card.Content>
+              </Card>
+          </Grid.Column>
+        </Grid.Row>
+        
+      </Grid>
+    )
+  }
+
   return (
     <>
       <Grid centered className="margintop">
