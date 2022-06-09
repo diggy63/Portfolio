@@ -35,7 +35,7 @@ export default function Square() {
           </Grid.Row>
         <Grid.Row textAlign="center" columns={rowCols}>
           
-          <Grid.Column textAlign="center">
+          <Grid.Column stretched textAlign="center">
               <Card centered>
                 <Image
                   src="https://i.imgur.com/zNjJfPH.png"
@@ -146,26 +146,22 @@ export default function Square() {
   }
 
   return (
-    <>
+    <div className="gridControl">
       <Grid centered className="margintop">
-        <Grid.Row>
+        <Grid.Row stretched>
         <AnimationOnScroll
               animateIn="animate__fadeIn"
               delay={1000}
               animateOut="animate__fadeIn"
             >
           <div className="heads">
-          <Header textAlign="center">
-            <Header.Content>
               Projects
-              </Header.Content>
-          </Header>
           </div>
           </AnimationOnScroll>
           </Grid.Row>
         <Grid.Row textAlign="center" columns={rowCols}>
           
-          <Grid.Column textAlign="center">
+          <Grid.Column stretched textAlign="center">
             <AnimationOnScroll
               animateIn="animate__fadeInLeftBig"
               delay={200}
@@ -294,6 +290,6 @@ export default function Square() {
         </Grid.Row>
         
       </Grid>
-    </>
+      </div>
   );
 }

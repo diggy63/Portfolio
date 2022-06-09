@@ -1,19 +1,27 @@
-.heads{
-  margin-top: 30px;
+.heads {
+  margin: 30px;
   padding: 10px;
-  height: 60px;
+  height: 10vh;
+  width: 80vw;
   background-color: rgb(253, 253, 253);
   display: flex;
-  justify-content: center;
-  align-content: center;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 64px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.margintop{
+.margintop {
   margin-top: 60px;
 }
 
-.nomargin{
+.nomargin {
   margin: 0;
+}
+
+.gridControl{
+  height: 100vh;
+  width:100vw;
+  margin-top: 10vh;
 }
