@@ -1,9 +1,19 @@
-/* .section1{
-    background-color: gray;
-    height: 100vh;
+.section1Mobile{
+    background-color: #e5e5e5;
+    height: 2100px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-  } */
+  }
+
+  .section2Mobile{
+    background-color: #282c34;
+    height: 2100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }

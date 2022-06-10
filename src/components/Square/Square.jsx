@@ -17,6 +17,7 @@ import { saveAs } from 'file-saver'
 
 export default function Square() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  const [imgSizer, setImageSizer] = useState(window.innerWidth < 1600);
   const [open, setOpen] = React.useState(false);
 
   function dlRes(e){
@@ -29,6 +30,8 @@ export default function Square() {
       () => {
         const ismobile = window.innerWidth < 600;
         if (ismobile !== isMobile) setIsMobile(ismobile);
+        const imgSize = window.innerWidth <1600;
+        if (imgSize !== imgSizer) setImageSizer(imgSize);
       },
       false
     );
@@ -111,16 +114,27 @@ export default function Square() {
   }
   return (
     // <Segment style={{maxWidth:1200}} padded="very">
-    <Grid style={{ maxWidth: 1200 }} centered stretched textAlign="justified">
+    <Grid style={{ maxWidth: 1600 }} centered stretched textAlign="justified">
+      <Grid.Row stretched verticalAlign="top">
+        <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              delay={1000}
+              animateOut="animate__fadeIn"
+            >
+          <div className="headsAbout">
+              About Me
+          </div>
+          </AnimationOnScroll>
+          </Grid.Row>
       <Grid.Row centered textAlign="center">
-        <Grid.Column width={7} textAlign="center">
+        <Grid.Column width={7} style={{ maxWidth: 600 }} textAlign="center">
           <AnimationOnScroll
             animateIn="animate__rotateInDownLeft"
             animateOut="animate__fadeOutLeftBig"
           >
             <div className="white">
               <div className="title">About Me</div>
-              <p>
+              <p className="smallScreen">
                 A Junior Developer with a background in MERN full-stack web
                 development, management, and collegiate sports. I approach each
                 project understanding that big achievements take small, precise
@@ -132,15 +146,16 @@ export default function Square() {
           </AnimationOnScroll>
         </Grid.Column>
 
-        <Grid.Column width={7} textAlign="center">
+        <Grid.Column width={7} style={{ maxWidth: 600 }} textAlign="center">
           <AnimationOnScroll
             animateIn="animate__rotateInDownRight"
             animateOut="animate__fadeOutLeftBig"
           >
             <div className="white">
               <div className="title">Education</div>
-              <p>General Assembly: Software Engineer Immersive</p>
-              <p>University of Washington: BA Poli Sci</p>
+              <p>General Assembly: Software Engineer Immersive
+                <br></br>
+                  University of Washington: BA Poli Sci</p>
               <Modal
                 onClose={() => setOpen(false)}
                 onOpen={() => setOpen(true)}

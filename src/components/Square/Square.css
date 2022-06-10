@@ -72,3 +72,26 @@ p{
   font-weight: bold;
   }
 }
+
+.headsAbout{
+  margin-top: 20px;
+  height: 10vh;
+  width: 1200px;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  border-radius: 10px;
+  border-style: solid;
+  font-size: 64px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 1600px) {
+  .smallScreen{
+    font-size: 16px;
+  }
+}
+

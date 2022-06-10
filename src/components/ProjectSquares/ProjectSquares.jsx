@@ -19,13 +19,13 @@ export default function Square() {
     );
   }, [isMobile]);
 
-  const rowCols = isMobile ? 2 : 4;
+  const rowCols = isMobile ? 1 : 4;
 
   if(isMobile){
     return(
       <Grid centered className="margintop">
         <Grid.Row>
-          <div className="heads">
+          <div className="headsMobile">
           <Header textAlign="center">
             <Header.Content>
               Projects
@@ -35,12 +35,12 @@ export default function Square() {
           </Grid.Row>
         <Grid.Row textAlign="center" columns={rowCols}>
           
-          <Grid.Column stretched textAlign="center">
+          <Grid.Column textAlign="center">
               <Card centered>
                 <Image
+                centered
                   src="https://i.imgur.com/zNjJfPH.png"
                   wrapped
-                  ui={false}
                 />
                 <Card.Content>
                   <Card.Header>Frogger</Card.Header>
@@ -50,10 +50,10 @@ export default function Square() {
                 </Card.Content>
                 <Card.Content extra>
                   <a href="https://diggy63.github.io/FroggerJSStyle/">
-                    <Button>View</Button>
+                    <Button size="mini">View</Button>
                   </a>
                   <a href="https://github.com/diggy63/FroggerJSStyle">
-                    <Button>GitHub</Button>
+                    <Button size="mini">GitHub</Button>
                   </a>
                 </Card.Content>
               </Card>
@@ -64,7 +64,6 @@ export default function Square() {
                 <Image
                   src="https://i.imgur.com/Tozmyve.jpg"
                   wrapped
-                  ui={false}
                 />
                 <Card.Content>
                   <Card.Header>Cocktail Instgram</Card.Header>
@@ -78,10 +77,10 @@ export default function Square() {
                 </Card.Content>
                 <Card.Content extra>
                 <a href="https://cocktail-lounge-dk.herokuapp.com/">
-                    <Button>View</Button>
+                    <Button size="mini">View</Button>
                   </a>
                   <a href="https://github.com/diggy63/Project-2-SEIR">
-                    <Button>GitHub</Button>
+                    <Button size="mini">GitHub</Button>
                   </a>
                 </Card.Content>
               </Card>
@@ -147,7 +146,7 @@ export default function Square() {
 
   return (
     <div className="gridControl">
-      <Grid centered className="margintop">
+      <Grid style={{ maxWidth: 1600 }} centered className="margintop">
         <Grid.Row stretched>
         <AnimationOnScroll
               animateIn="animate__fadeIn"

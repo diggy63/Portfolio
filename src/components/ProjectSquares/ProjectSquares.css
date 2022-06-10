@@ -1,8 +1,7 @@
 .heads {
-  margin: 30px;
-  padding: 10px;
+  margin-top: 40px;
   height: 10vh;
-  width: 80vw;
+  width: 1200px;
   background-color: rgb(253, 253, 253);
   display: flex;
   border-radius: 10px;
@@ -24,4 +23,20 @@
   height: 100vh;
   width:100vw;
   margin-top: 10vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.headsMobile {
+  padding: 10px;
+  height: 10vh;
+  width: 40vw;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  border-radius: 10px;
+  font-size: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
