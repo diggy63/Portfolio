@@ -166,7 +166,7 @@ export default function Square() {
                   <Image
                   centered
                     size="big"
-                    src="/Images/Resume.jpg"
+                    src="/Images/resume2022.jpg"
                     wrapped
                   />
                 </Modal.Content>
