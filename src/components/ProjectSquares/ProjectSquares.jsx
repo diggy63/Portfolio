@@ -12,9 +12,14 @@ import {
   Header,
 } from "semantic-ui-react";
 
-export default function Square() {
+export default function Square({isDark}) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
-
+  let color = ''
+  let invert = false
+  if(isDark){
+    color = 'grey'
+    invert = true
+  }
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -135,15 +140,15 @@ export default function Square() {
     <Grid centered>
       <Grid.Row centered columns={1}>
         <Grid.Column>
-          <Header as="h2" textAlign="center" dividing>
+          <Header as="h1" textAlign="center" color={color} inverted={invert} dividing>
             Projects
           </Header>
         </Grid.Column>
       </Grid.Row>
-      <Grid.Row columns={4} columns="equal">
+      <Grid.Row columns={5}>
         <Grid.Column>
           <Card>
-            <Image src="https://i.imgur.com/zNjJfPH.png" wrapped ui={false} />
+            <Image src="/Images/FroggerResize.png" wrapped ui={true} />
             <Card.Content>
               <Card.Header>Frogger </Card.Header>
               <Card.Meta>
@@ -156,41 +161,105 @@ export default function Square() {
             </Card.Content>
             <Card.Content extra>
               <a href="https://diggy63.github.io/FroggerJSStyle/">
-                <Button size="mini">View</Button>
+                <Button>View</Button>
               </a>
               <a href="https://github.com/diggy63/FroggerJSStyle">
-                <Button size="mini">GitHub</Button>
+                <Button>GitHub</Button>
               </a>
             </Card.Content>
           </Card>
         </Grid.Column>
         <Grid.Column>
-        <Card>
-            <Image src="https://i.imgur.com/Tozmyve.jpg" wrapped ui={false} />
+          <Card>
+            <Image src="/Images/CocktailsResize.jpg" wrapped ui={false} />
             <Card.Content>
               <Card.Header>Cocktail Instagram</Card.Header>
               <Card.Meta>
                 <span className="date">Node.js Express MongoDB</span>
               </Card.Meta>
               <Card.Description>
-                Node.Js Express app using MongoDB and Mongoosse for the Database which allows you to post your favorite Cocktails.
+                Node.Js Express app using MongoDB for the Database which allows
+                you to post your favorite Cocktails.
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a href="https://diggy63.github.io/FroggerJSStyle/">
-                <Button size="mini">View</Button>
+              <a href="https://cocktail-lounge-dk.herokuapp.com/">
+                <Button>View</Button>
               </a>
-              <a href="https://github.com/diggy63/FroggerJSStyle">
-                <Button size="mini">GitHub</Button>
+              <a href="https://github.com/diggy63/Project-2-SEIR">
+                <Button>GitHub</Button>
               </a>
             </Card.Content>
           </Card>
         </Grid.Column>
         <Grid.Column>
-          <h1>Project Three</h1>
+          <Card>
+            <Image src="/Images/EventBudsResize.jpg" wrapped ui={false} />
+            <Card.Content>
+              <Card.Header>Event Buds</Card.Header>
+              <Card.Meta>
+                <span className="date">Django Python PostgreSQL</span>
+              </Card.Meta>
+              <Card.Description>
+                Django App ment for you to connect with others going to the same
+                event as you using the ticketmater API.
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a href="https://eventbuds.herokuapp.com/">
+                <Button>View</Button>
+              </a>
+              <a href="https://github.com/diggy63/eventbuds">
+                <Button>GitHub</Button>
+              </a>
+            </Card.Content>
+          </Card>
         </Grid.Column>
         <Grid.Column>
-          <h1>Project four</h1>
+          <Card>
+            <Image src="/Images/WorkoutResize.png" wrapped ui={false} />
+            <Card.Content>
+              <Card.Header>Workout Tracker</Card.Header>
+              <Card.Meta>
+                <span className="date">MERN Stack</span>
+              </Card.Meta>
+              <Card.Description>
+                Full Mern Stack App for Tracking Workouts using backend as API
+                aswell as the werger Workout API
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a href="https://workouttrackerdk.herokuapp.com/">
+                <Button>View</Button>
+              </a>
+              <a href="https://github.com/diggy63/eventbuds">
+                <Button>GitHub</Button>
+              </a>
+            </Card.Content>
+          </Card>
+        </Grid.Column>
+        <Grid.Column>
+          <Card>
+            <Image src="/Images/pResize.png" wrapped ui={false} />
+            <Card.Content>
+              <Card.Header>Pathfinding React App</Card.Header>
+              <Card.Meta>
+                <span className="date">React</span>
+              </Card.Meta>
+              <Card.Description>
+                Stand Alone React App the demontrates pathfinding algorithms
+                like A star and Dijkstra's.
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a href="https://diggy63.github.io/PathfinderReact/">
+                <Button>View</Button>
+              </a>
+              <a href="https://github.com/diggy63/PathfinderReact">
+                <Button>GitHub</Button>
+              </a>
+            </Card.Content>
+          </Card>
         </Grid.Column>
       </Grid.Row>
     </Grid>

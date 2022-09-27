@@ -13,16 +13,22 @@ import {
   Container,
   Modal,
 } from "semantic-ui-react";
-import { saveAs } from 'file-saver'
+import { saveAs } from "file-saver";
 
-export default function Square() {
+export default function Square({isDark}) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [imgSizer, setImageSizer] = useState(window.innerWidth < 1600);
-  const [open, setOpen] = React.useState(false);
-
-  function dlRes(e){
-    saveAs('/Images/Resume.jpg', 'resumeDanielK.jpg')
-
+  const [titleColor, setTitleColor] = useState('')
+  const [open, setOpen] = useState(false);
+  let color = ''
+  let invert = false
+  if(isDark){
+    color = 'grey'
+    invert = true
+    console.log('change')
+  }
+  function dlRes(e) {
+    saveAs("/Images/Resume.jpg", "resumeDanielK.jpg");
   }
   useEffect(() => {
     window.addEventListener(
@@ -30,7 +36,7 @@ export default function Square() {
       () => {
         const ismobile = window.innerWidth < 600;
         if (ismobile !== isMobile) setIsMobile(ismobile);
-        const imgSize = window.innerWidth <1600;
+        const imgSize = window.innerWidth < 1600;
         if (imgSize !== imgSizer) setImageSizer(imgSize);
       },
       false
@@ -39,12 +45,11 @@ export default function Square() {
 
   const iconClass = isMobile ? "mini" : "tiny";
 
-
-  if(isMobile){
-    return(
+  if (isMobile) {
+    return (
       <Grid style={{ maxWidth: 1200 }} centered stretched textAlign="justified">
-      <Grid.Row centered textAlign="center">
-        <Grid.Column width={16} textAlign="center">
+        <Grid.Row centered textAlign="center">
+          <Grid.Column width={16} textAlign="center">
             <div className="white">
               <div className="title">About Me</div>
               <p>
@@ -56,9 +61,9 @@ export default function Square() {
                 solutions to colleagues and clients.
               </p>
             </div>
-        </Grid.Column>
+          </Grid.Column>
 
-        <Grid.Column width={16} textAlign="center">
+          <Grid.Column width={16} textAlign="center">
             <div className="white">
               <div className="title">Education</div>
               <p>General Assembly: Software Engineer Immersive</p>
@@ -70,12 +75,7 @@ export default function Square() {
                 trigger={<Button>Resume</Button>}
               >
                 <Modal.Content image>
-                  <Image
-                  centered
-                    size="big"
-                    src="/Images/Resume.jpg"
-                    wrapped
-                  />
+                  <Image centered size="big" src="/Images/Resume.jpg" wrapped />
                 </Modal.Content>
                 <Modal.Actions>
                   <Button onClick={dlRes}>Download</Button>
@@ -85,9 +85,9 @@ export default function Square() {
                 </Modal.Actions>
               </Modal>
             </div>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row stretched className="marginTop" verticalAlign="bottom">
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row stretched className="marginTop" verticalAlign="bottom">
           <Grid.Column
             className="white marginTop"
             textAlign="center"
@@ -108,32 +108,36 @@ export default function Square() {
               <Image src="/Images/postgresql.png" />
             </Image.Group>
           </Grid.Column>
-      </Grid.Row>
-    </Grid>
-    )
+        </Grid.Row>
+      </Grid>
+    );
   }
   return (
     // <Segment style={{maxWidth:1200}} padded="very">
     <Grid style={{ maxWidth: 1600 }} centered stretched textAlign="justified">
-      <Grid.Row stretched verticalAlign="top">
+      <Grid.Row>
+        <Grid.Column>
         <AnimationOnScroll
-              animateIn="animate__fadeIn"
-              delay={1000}
-              animateOut="animate__fadeIn"
-            >
-          <div className="headsAbout">
-              About Me
-          </div>
-          </AnimationOnScroll>
-          </Grid.Row>
-      <Grid.Row centered textAlign="center">
-        <Grid.Column width={7} style={{ maxWidth: 600 }} textAlign="center">
+          animateIn="animate__fadeIn"
+          delay={1000}
+          animateOut="animate__fadeIn"
+        >
+          <Header as="h1" textAlign="center" dividing inverted={invert} color={color}>
+            About Me
+          </Header>
+        </AnimationOnScroll>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row colums={2} centered textAlign="center">
+        <Grid.Column width={7} textAlign="center">
           <AnimationOnScroll
             animateIn="animate__rotateInDownLeft"
             animateOut="animate__fadeOutLeftBig"
           >
             <div className="white">
-              <div className="title">About Me</div>
+            <Header as="h1" textAlign="center" dividing>
+              Who I Am
+            </Header>
               <p className="smallScreen">
                 A Junior Developer with a background in MERN full-stack web
                 development, management, and collegiate sports. I approach each
@@ -146,16 +150,20 @@ export default function Square() {
           </AnimationOnScroll>
         </Grid.Column>
 
-        <Grid.Column width={7} style={{ maxWidth: 600 }} textAlign="center">
+        <Grid.Column width={7} textAlign="center">
           <AnimationOnScroll
             animateIn="animate__rotateInDownRight"
             animateOut="animate__fadeOutLeftBig"
           >
             <div className="white">
-              <div className="title">Education</div>
-              <p>General Assembly: Software Engineer Immersive
+            <Header as="h1" textAlign="center" dividing>
+              Education
+            </Header>
+              <p>
+                General Assembly: Software Engineer Immersive
                 <br></br>
-                  University of Washington: BA Poli Sci</p>
+                University of Washington: BA Poli Sci
+              </p>
               <Modal
                 onClose={() => setOpen(false)}
                 onOpen={() => setOpen(true)}
@@ -164,7 +172,7 @@ export default function Square() {
               >
                 <Modal.Content image>
                   <Image
-                  centered
+                    centered
                     size="big"
                     src="/Images/resume2022.jpg"
                     wrapped
@@ -192,7 +200,9 @@ export default function Square() {
             verticalAlign="middle"
             width={14}
           >
-            <div className="title">Skills</div>
+            <Header as="h1" textAlign="center" dividing>
+              Skills
+            </Header>
             <Image.Group size={iconClass}>
               <Image src="/Images/htmlB2.png" />
               <Image src="/Images/css-3B.png" />
@@ -208,15 +218,7 @@ export default function Square() {
           </Grid.Column>
         </AnimationOnScroll>
       </Grid.Row>
-      {/* <AnimationOnScroll animateIn="animate__fadeInLeftBig" animateOut="animate__fadeOutLeftBig">
-        <div className="sqaureTL">TopLeft</div>
-        <div className="sqaureBL">BottomLeft</div>
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInRightBig" animateOut="animate__fadeOutRightBig">
-        <div className="sqaureTR">TopRight</div>
-        <div className="sqaureBR">BottomRight</div>
-      </AnimationOnScroll> */}
+
     </Grid>
-    // </Segment>
   );
 }

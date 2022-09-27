@@ -9,7 +9,7 @@ import {Grid} from 'semantic-ui-react'
 export default function Page({ pageID, pageDown, pageUp, secClass, isDark }) {
   return (
     <div id={pageID} className={secClass}>
-        <Square />
+        <Square isDark={isDark}/>
         <Scrollup pageUp={pageUp} isDark={isDark}/>
       <Scrolldown pageDown={pageDown} pageID={pageID} isDark={isDark}/>
     </div>

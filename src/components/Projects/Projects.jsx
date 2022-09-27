@@ -21,7 +21,7 @@ export default function Page({ pageID, pageDown, pageUp, secClass, isDark }) {
 
   return (
     <div id={pageID} className={callForSec}>
-        <ProjectSquares />
+        <ProjectSquares isDark={isDark} />
         <Scrollup pageUp={pageUp} isDark={isDark}/>
       <Scrolldown pageDown={pageDown} pageID={pageID} isDark={isDark}/>
     </div>
