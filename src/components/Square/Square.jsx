@@ -174,7 +174,7 @@ export default function Square({isDark}) {
                   <Image
                     centered
                     size="big"
-                    src="/Images/resume2022.jpg"
+                    src="/Images/resume.PNG"
                     wrapped
                   />
                 </Modal.Content>

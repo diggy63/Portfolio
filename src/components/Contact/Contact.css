@@ -11,3 +11,11 @@
   .contactMargin{
     margin-top: 60px;
   }
+
+  .descriptionFont{
+    font-size: 16px;
+  }
+
+  .cardContainer{
+    width:300px;
+  }
